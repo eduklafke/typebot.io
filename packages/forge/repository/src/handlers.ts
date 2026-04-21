@@ -30,7 +30,9 @@ import perplexityBlockHandlers from "@typebot.io/perplexity-block/handlers";
 import { posthogBlock } from "@typebot.io/posthog-block";
 import posthogBlockHandlers from "@typebot.io/posthog-block/handlers";
 import { qrCodeBlock } from "@typebot.io/qrcode-block";
+import { daitoTagsBlock } from "@typebot.io/daito-tags-block";
 import qrCodeBlockHandlers from "@typebot.io/qrcode-block/handlers";
+import daitoTagsBlockHandlers from "@typebot.io/daito-tags-block/handlers";
 import { segmentBlock } from "@typebot.io/segment-block";
 import segmentBlockHandlers from "@typebot.io/segment-block/handlers";
 import { togetherAiBlock } from "@typebot.io/together-ai-block";
@@ -43,6 +45,7 @@ export const forgedBlockHandlers = {
   [calComBlock.id]: calComBlockHandlers,
   [chatNodeBlock.id]: chatNodeBlockHandlers,
   [qrCodeBlock.id]: qrCodeBlockHandlers,
+  [daitoTagsBlock.id]: daitoTagsBlockHandlers,
   [difyAiBlock.id]: difyAiBlockHandlers,
   [mistralBlock.id]: mistralBlockHandlers,
   [elevenlabsBlock.id]: elevenlabsBlockHandlers,

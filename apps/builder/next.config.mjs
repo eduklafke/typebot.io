@@ -55,7 +55,7 @@ const nextConfig = {
         headers: [
           {
             key: "X-Frame-Options",
-            value: "SAMEORIGIN",
+            value: "ALLOWALL",
           },
           {
             key: "X-Content-Type-Options",
@@ -70,7 +70,7 @@ const nextConfig = {
               `connect-src 'self' https: wss:${
                 isDev ? " http://localhost:* ws://localhost:*" : ""
               }`,
-              "frame-src 'self' https:",
+              "frame-src 'self' https: http:",
               `img-src 'self' data: blob: https:${isDev ? " http://localhost:*" : ""}`,
               "font-src 'self' https: data:",
               `media-src 'self' blob: https:${isDev ? " http://localhost:* " : ""}`,

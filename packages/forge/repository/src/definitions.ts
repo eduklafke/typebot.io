@@ -15,6 +15,7 @@ import { openAIBlock } from "@typebot.io/openai-block";
 import { perplexityBlock } from "@typebot.io/perplexity-block";
 import { posthogBlock } from "@typebot.io/posthog-block";
 import { qrCodeBlock } from "@typebot.io/qrcode-block";
+import { daitoTagsBlock } from "@typebot.io/daito-tags-block";
 import { segmentBlock } from "@typebot.io/segment-block";
 import { togetherAiBlock } from "@typebot.io/together-ai-block";
 import { zendeskBlock } from "@typebot.io/zendesk-block";
@@ -24,6 +25,7 @@ export const forgedBlocks = {
   [calComBlock.id]: calComBlock,
   [chatNodeBlock.id]: chatNodeBlock,
   [qrCodeBlock.id]: qrCodeBlock,
+  [daitoTagsBlock.id]: daitoTagsBlock,
   [difyAiBlock.id]: difyAiBlock,
   [mistralBlock.id]: mistralBlock,
   [elevenlabsBlock.id]: elevenlabsBlock,
