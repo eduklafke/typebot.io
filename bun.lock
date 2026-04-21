@@ -734,6 +734,14 @@
         "@types/react": "^19.2.14",
       },
     },
+    "packages/forge/blocks/daitoTags": {
+      "name": "@typebot.io/daito-tags-block",
+      "version": "1.0.0",
+      "dependencies": {
+        "@typebot.io/forge": "workspace:*",
+        "@typebot.io/lib": "workspace:*",
+      },
+    },
     "packages/forge/blocks/deepseek": {
       "name": "@typebot.io/deepseek-block",
       "version": "1.0.0",
@@ -3322,6 +3330,8 @@
     "@typebot.io/config": ["@typebot.io/config@workspace:packages/config"],
 
     "@typebot.io/credentials": ["@typebot.io/credentials@workspace:packages/credentials"],
+
+    "@typebot.io/daito-tags-block": ["@typebot.io/daito-tags-block@workspace:packages/forge/blocks/daitoTags"],
 
     "@typebot.io/deepseek-block": ["@typebot.io/deepseek-block@workspace:packages/forge/blocks/deepseek"],
 
