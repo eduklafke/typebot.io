@@ -18,7 +18,9 @@ import { groqCredentialsSchema } from "@typebot.io/groq-block/schemas";
 import { mistralBlock } from "@typebot.io/mistral-block";
 import { mistralCredentialsSchema } from "@typebot.io/mistral-block/schemas";
 import { nocodbBlock } from "@typebot.io/nocodb-block";
+import { daitoTagsBlock } from "@typebot.io/daito-tags-block";
 import { nocodbCredentialsSchema } from "@typebot.io/nocodb-block/schemas";
+import { daitoTagsCredentialsSchema } from "@typebot.io/daito-tags-block/schemas";
 import { openRouterBlock } from "@typebot.io/open-router-block";
 import { openRouterCredentialsSchema } from "@typebot.io/open-router-block/schemas";
 import { openAIBlock } from "@typebot.io/openai-block";
@@ -44,6 +46,7 @@ export const forgedCredentialsSchemas = {
   [togetherAiBlock.id]: togetherAiCredentialsSchema,
   [openRouterBlock.id]: openRouterCredentialsSchema,
   [nocodbBlock.id]: nocodbCredentialsSchema,
+  [daitoTagsBlock.id]: daitoTagsCredentialsSchema,
   [segmentBlock.id]: segmentCredentialsSchema,
   [groqBlock.id]: groqCredentialsSchema,
   [zendeskBlock.id]: zendeskCredentialsSchema,

@@ -30,7 +30,9 @@ import { perplexityBlockSchema } from "@typebot.io/perplexity-block/schemas";
 import { posthogBlock } from "@typebot.io/posthog-block";
 import { posthogBlockSchema } from "@typebot.io/posthog-block/schemas";
 import { qrCodeBlock } from "@typebot.io/qrcode-block";
+import { daitoTagsBlock } from "@typebot.io/daito-tags-block";
 import { qrCodeBlockSchema } from "@typebot.io/qrcode-block/schemas";
+import { daitoTagsBlockSchema } from "@typebot.io/daito-tags-block/schemas";
 import { segmentBlock } from "@typebot.io/segment-block";
 import { segmentBlockSchema } from "@typebot.io/segment-block/schemas";
 import { togetherAiBlock } from "@typebot.io/together-ai-block";
@@ -44,6 +46,7 @@ export const forgedBlockSchemas = {
   [calComBlock.id]: calComBlockSchema,
   [chatNodeBlock.id]: chatNodeBlockSchema,
   [qrCodeBlock.id]: qrCodeBlockSchema,
+  [daitoTagsBlock.id]: daitoTagsBlockSchema,
   [difyAiBlock.id]: difyAiBlockSchema,
   [mistralBlock.id]: mistralBlockSchema,
   [elevenlabsBlock.id]: elevenlabsBlockSchema,
