@@ -16,7 +16,6 @@ import { SquareLock01Icon } from "@typebot.io/ui/icons/SquareLock01Icon";
 import { SquareUnlock01Icon } from "@typebot.io/ui/icons/SquareUnlock01Icon";
 import { TriangleAlertIcon } from "@typebot.io/ui/icons/TriangleAlertIcon";
 import { cn } from "@typebot.io/ui/lib/cn";
-import { useRouter } from "next/router";
 import { useRef, useState } from "react";
 import { TextLink } from "@/components/TextLink";
 import { ChangePlanDialog } from "@/features/billing/components/ChangePlanDialog";
@@ -42,7 +41,7 @@ export const PublishButton = ({
 }: Props) => {
   const { t } = useTranslate();
   const { workspace } = useWorkspace();
-  const { push, query, pathname } = useRouter();
+  // useRouter removed — Daito customization
   const { isOpen, onOpen, onClose } = useOpenControls();
   const {
     isOpen: isNewEngineWarningOpen,
