@@ -964,6 +964,7 @@
         "@typebot.io/blink-block": "workspace:*",
         "@typebot.io/cal-com-block": "workspace:*",
         "@typebot.io/chat-node-block": "workspace:*",
+        "@typebot.io/daito-tags-block": "workspace:*",
         "@typebot.io/deepseek-block": "workspace:*",
         "@typebot.io/dify-ai-block": "workspace:*",
         "@typebot.io/elevenlabs-block": "workspace:*",
