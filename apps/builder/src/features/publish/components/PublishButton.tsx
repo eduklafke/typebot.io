@@ -96,8 +96,7 @@ export const PublishButton = ({
           if (data.warnings) {
             setTrademarkPotentialInfringement(data.warnings[0].trademark);
             onTrademarkInfringementOpen();
-          } else if (!publishedTypebot && !pathname.endsWith("share"))
-            push(`/typebots/${query.typebotId}/share`);
+          } // Redirect to share page removed — Daito customization
         },
       }),
     );
