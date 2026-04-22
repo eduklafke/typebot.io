@@ -1,6 +1,6 @@
-import { option, AuthDefinition } from "@typebot.io/forge";
+import { createAuth, option } from "@typebot.io/forge";
 
-export const auth = {
+export const auth = createAuth({
   type: "encryptedCredentials",
   name: "Daito Shooter",
   schema: option.object({
@@ -9,6 +9,7 @@ export const auth = {
         label: "URL do Shooter",
         placeholder: "https://shooter.daitodigital.com",
         isRequired: true,
+        withVariableButton: false,
       },
     }),
     apiKey: option.string.meta({
@@ -16,7 +17,8 @@ export const auth = {
         label: "API Key",
         isRequired: true,
         inputType: "password",
+        withVariableButton: false,
       },
     }),
   }),
-} satisfies AuthDefinition;
+});
