@@ -84,5 +84,6 @@ export const forgedBlockSchema = z.discriminatedUnion("type", [
   deepSeekBlockSchema,
   blinkBlockSchema,
   gmailBlockSchema,
+  daitoTagsBlockSchema,
 ]);
 export type ForgedBlock = z.infer<typeof forgedBlockSchema>;
