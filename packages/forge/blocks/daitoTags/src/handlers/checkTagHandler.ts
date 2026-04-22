@@ -13,7 +13,7 @@ export const checkTagHandler = createActionHandler(checkTag, {
       const data = await res.json();
 
       if (options.saveResultInVariableId) {
-        variables.set(options.saveResultInVariableId, data.hasTag ? "true" : "false");
+        variables.set([{ id: options.saveResultInVariableId, value: data.hasTag ? "true" : "false" }]);
       }
     } catch (err) {
       logs.add(`Erro ao verificar tag: ${err}`);

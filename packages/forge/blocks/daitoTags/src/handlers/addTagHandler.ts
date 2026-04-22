@@ -16,7 +16,7 @@ export const addTagHandler = createActionHandler(addTag, {
       const data = await res.json();
 
       if (options.saveResultInVariableId) {
-        variables.set(options.saveResultInVariableId, data.success ? "true" : "false");
+        variables.set([{ id: options.saveResultInVariableId, value: data.success ? "true" : "false" }]);
       }
     } catch (err) {
       logs.add(`Erro ao adicionar tag: ${err}`);
