@@ -5,13 +5,6 @@ export const checkTag = createAction({
   auth,
   name: "Verificar Tag",
   options: option.object({
-    phone: option.string.meta({
-      layout: {
-        label: "Telefone do contato",
-        placeholder: "{{phone}}",
-        isRequired: true,
-      },
-    }),
     tagName: option.string.meta({
       layout: {
         label: "Nome da tag",
@@ -21,8 +14,9 @@ export const checkTag = createAction({
     }),
     saveResultInVariableId: option.string.meta({
       layout: {
-        label: "Salvar resultado (true/false) em",
+        label: "Salvar resultado em",
         inputType: "variableDropdown",
+        helperText: "Salva 'Contém tag' ou 'Não contém tag'. Use um bloco Condição depois para ramificar.",
       },
     }),
   }),

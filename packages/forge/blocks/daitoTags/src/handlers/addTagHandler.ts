@@ -6,18 +6,15 @@ export const addTagHandler = createActionHandler(addTag, {
     if (!credentials?.baseUrl || !credentials?.apiKey) {
       return logs.add("URL e API Key são obrigatórios");
     }
-    if (!options.phone || !options.tagName) {
-      return logs.add("Telefone e nome da tag são obrigatórios");
+
+    const phone = variables.get("remoteJid")?.toString().split("@")[0] || variables.get("phone")?.toString() || "";
+    if (!phone) {
+      return logs.add("Telefone do contato não disponível");
     }
 
     try {
-      const url = `${credentials.baseUrl}/api/tags/action?do=add&phone=${encodeURIComponent(options.phone)}&tag=${encodeURIComponent(options.tagName)}&key=${encodeURIComponent(credentials.apiKey)}`;
-      const res = await fetch(url);
-      const data = await res.json();
-
-      if (options.saveResultInVariableId) {
-        variables.set([{ id: options.saveResultInVariableId, value: data.success ? "true" : "false" }]);
-      }
+      const url = `${credentials.baseUrl}/api/tags/action?do=add&phone=${encodeURIComponent(phone)}&tag=${encodeURIComponent(options.tagName || "")}&key=${encodeURIComponent(credentials.apiKey)}`;
+      await fetch(url);
     } catch (err) {
       logs.add(`Erro ao adicionar tag: ${err}`);
     }
